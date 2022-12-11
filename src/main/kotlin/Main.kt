@@ -1,5 +1,14 @@
+val archives = mutableMapOf<String, MutableMap<String, String>>()
+var currentArchive: String = ""
+
 fun main() {
-    // ваш код начнется здесь
-    // вы не должны ограничиваться только классом Main и можете создавать свои классы по необходимости
-    println("Привет")
+    App.start()
 }
+
+object App {
+    fun start() {
+        printMenu("архив", archives.keys, ::createArchive, ::openArchive)
+    }
+}
+
+
